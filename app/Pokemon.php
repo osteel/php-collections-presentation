@@ -50,11 +50,27 @@ class Pokemon
     }
 
     /**
+     * Attack!
+     */
+    public function attack()
+    {
+        $this->action('attacks!');
+    }
+
+    /**
+     * Defend!
+     */
+    public function defend()
+    {
+        $this->action('defends itself!');
+    }
+
+    /**
      * Run away!
      */
     public function flee()
     {
-        $this->action('is running away!');
+        $this->action('runs away!');
     }
 
     /**
