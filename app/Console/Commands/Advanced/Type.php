@@ -31,12 +31,12 @@ class Type extends Command
         $pokedex = collect($dataset)->mapInto(Pokemon::class);
 
         $abilities = $pokedex
-            ->groupBy->types
+            ->groupBy('types')
             ->map->reduce(function (int $score, Pokemon $pokemon) {
                 return $score + $pokemon->abilities->sum();
             }, 0)
             ->sort()
-            ->map(function (int $total, string $type) {
+            ->each(function (int $total, string $type) {
                 $this->info(sprintf('=> The sum of the abilities of pokemons of type %s is: %s', $type, $total));
             });
     }

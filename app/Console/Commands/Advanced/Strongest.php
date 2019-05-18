@@ -36,6 +36,6 @@ class Strongest extends Command
             ->first();
 
         $this->info('Strongest pokemon:');
-        $this->info(print_r($strongest));
+        $this->info(print_r($strongest, true));
     }
 }

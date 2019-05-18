@@ -41,7 +41,7 @@ class Macro extends Command
         if (! empty($pokemons)) {
             $this->info($pokemons->toJson(JSON_PRETTY_PRINT));
         } else {
-            $this->info(print_r($pokemon));
+            $this->info(print_r($pokemon, true));
         }
     }
 }
