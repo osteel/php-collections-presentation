@@ -43,7 +43,6 @@ class Benchmark extends Command
 
         for ($i = 0; $i < 10; $i ++) {
             $t1 = microtime(true);
-            \Log::debug($t1);
             $this->call($command, ['file' => sprintf('%s.json', $quantity)]);
             $t2 = microtime(true);
             $times[] = $t2 - $t1;
